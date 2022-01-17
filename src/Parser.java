@@ -6,21 +6,13 @@ public class Parser {
     возвращает структуру данных типа Tokens для последующих математических вычислений в классе Calculator
      */
 
-    public static Tokens Pars_user_string(String input_data_string_usr) throws Exception {
+    public static Tokens Pars_user_string(String input_data_string_usr) {
         /*
         ф парсит принятую от пользователя строку на числа и математический оператор и возвращает
         структуру данных типа Tokens
          */
 
-        //принимаем предобработанную для парсинга строку
-        //TODO после отладки заменить принимаемую строку от функции TEST_Get_user_data на строку от
-        // функции Get_user_data
-
-        //String input_data_string = User_input_data.TEST_Get_user_data();
-        //String input_data_string = User_input_data.Get_user_data ();
-
         String input_data_string = input_data_string_usr;
-
         Tokens user_tokens = new Tokens();
 
         //делим строку по матоператору
@@ -157,8 +149,7 @@ class Tokens {
             }
         }
         //выполняем проверки для римских символов
-        else if (token_type_temp == 'r') {
-
+        else {//if (token_type_temp == 'r')
             //проверяем символы токена на допустимые значения
             for (int i = 1; i < token_StringBuffer_usr.length(); i++){
                 if (!roman_numbers_TreeSet_usr.contains(token_StringBuffer_usr.charAt(i)))
