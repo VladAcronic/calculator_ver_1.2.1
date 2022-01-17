@@ -104,20 +104,6 @@ class Tokens {
         }
     }
 
-    /*
-    public void String_splitter (String input_data_string_usr){
-
-        TODO метод становится неиспользуемым
-        расделяет исходную строку по найденному матоператору, в подстроках удаляет краевые пробелы,
-        создает из них объекты StringBuffer и записывает их в соответствующие поля класса Tokens
-
-
-        String[] tokens_array = input_data_string_usr.split (this.operand_token.get_escape_operation());
-        this.left_expression_token = tokens_array[0].trim();
-        this.right_expression_token = tokens_array[1].trim();
-    }
-    */
-
     private char String_token_analyzer(StringBuffer token_StringBuffer_usr,
                                        TreeSet <Character> arabic_numbers_TreeSet_usr,
                                        TreeSet <Character> roman_numbers_TreeSet_usr) throws Exception {
